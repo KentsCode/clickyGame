@@ -15,7 +15,7 @@ class App extends Component {
   }
   componentDidMount(){
     //creates an instance of animals component  
-    this.setState({animals: this.shuffle(this.state.animals)})
+    this.setState({animals: this.shuffle(this.state.animals)});
   }
   shuffle = animals => {
     console.log("shuffle called");
@@ -34,14 +34,21 @@ class App extends Component {
     //console.log(this.state.userGuessed.length);
     if (this.state.userGuessed.includes(currentId)) {
       console.log("Game Over")
+      let updateTopScore = this.state.score;
       this.setState({
       userGuessed: [],
       score: 0,
-      highScore: 0
+      highScore: updateTopScore
     })
     } else {
       console.log("no match");
       this.state.userGuessed.push(currentId);
+      let updateScore = this.state.score;
+      updateScore = updateScore + 1;
+      console.log("score " + updateScore);
+      this.setState({
+        score: updateScore
+      })
     }
     this.componentDidMount();
     //this.shuffle(this.state.animals);
