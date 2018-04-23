@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "imageUrl": "images/baboon.jpg",
+        "state":false
+    },
+    {
+        "id": 2,
+        "imageUrl": "images/bears.jpg",
+        "state":false
+    },
+    {
+        "id": 3,
+        "imageUrl": "../images/foxes.jpg",
+        "state":false
+    },
+    {
+        "id": 4,
+        "imageUrl": "../images/horse.jpg",
+        "state":false
+    },
+    {
+        "id": 5,
+        "imageUrl": "../images/hyena.jpg",
+        "state":false
+    },
+    {
+        "id": 6,
+        "imageUrl": "../images/leopard.jpg",
+        "state":false
+    },
+    {
+        "id": 7,
+        "imageUrl": "../images/lion.jpg",
+        "state":false
+    },
+    {
+        "id": 8,
+        "imageUrl": "../images/reindeer.jpg",
+        "state":false
+    },
+    {
+        "id": 9,
+        "imageUrl": "../images/wolf.jpg",
+        "state":false
+    }
+]
