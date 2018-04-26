@@ -9,12 +9,12 @@ class App extends Component {
   state = {
     //initializes game, sets scores to zero
     animals: animals,
-    userGuessed: [0],
+    userGuessed: [],
     score: 0,
     highScore: 0
   }
   componentDidMount(){
-    //creates an instance of animals component  
+    //loads current state of animals to dom. called more than once. 
     this.setState({animals: this.shuffle(this.state.animals)});
   }
   shuffle = animals => {
@@ -22,7 +22,6 @@ class App extends Component {
     //call this function each time to sort the animals in a random order. (called a Fisher-Yates-Durstenfeld shuffle.)
     for (let i = 0; i < animals.length; i++) {
       let j = i + Math.floor(Math.random() * (animals.length - i));
-      //console.log("shuffling");
       let temp = animals[j];
       animals[j] = animals[i];
       animals[i] = temp;
@@ -30,8 +29,7 @@ class App extends Component {
     return animals; 
   }
   imageClick = currentId => {
-    //console.log("picture clicked " + currentId);
-    //console.log(this.state.userGuessed.length);
+    //click handler, most game logic is here.
     if (this.state.userGuessed.includes(currentId)) {
       console.log("Game Over")
       let updateTopScore = this.state.score;
@@ -51,12 +49,7 @@ class App extends Component {
       })
     }
     this.componentDidMount();
-    //this.shuffle(this.state.animals);
-    //console.log(this.state.animals);
   }
-  //correct 
-
-  //incorrect
 
   render() {
     return (
@@ -73,7 +66,6 @@ class App extends Component {
           ))}
         </Wrapper>
       </div>
-      
     )
   }
 }

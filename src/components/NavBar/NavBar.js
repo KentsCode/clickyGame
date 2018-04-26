@@ -6,7 +6,7 @@ const Navbar = props => (
   <nav className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
-        <p className="nav-link-center"> Click an image to begin! </p>
+        <h2 className="nav-link-center"> Click an image to begin! </h2>
         <p className="nav-link-right"> SCORE: <span>{props.score}</span> |  LAST GAME SCORE: <span>{props.highScore}</span></p>
       </div>
     </div>
